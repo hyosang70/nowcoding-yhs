@@ -147,6 +147,30 @@ export class JstoblockService {
     return element;
   }
 
+  // if loop
+  public createIfStatement(child){
+    this.log('createIfStatement', child);
+
+    let element = this.createBlock('controls_if');
+
+    //element = this.parseAssignmentExpression(child.init, element);
+
+    /* const toValue = this.createValue('IF0');
+    const toShadow = this.createShadow('logic_boolean'); */
+    /* const toShadowField = this.createField(
+      child.test.right.value,
+      'NUM',
+      null,
+      null
+    ); */
+
+   /*  toShadow.appendChild(toShadowField);
+    toValue.appendChild(toShadow); */
+
+      return element;
+  }
+
+  // for loop
   public createForRepeatStatement(child) {
     this.log('createForRepeatStatement', child);
     const element = this.createBlock('controls_repeat_ext');
@@ -331,9 +355,10 @@ export class JstoblockService {
           alert(errorMessage + child.type);
           break;
         case 'IfStatement':
-          this.log('parseBody.IfStatement', child);
-          throw new Error(errorMessage + child.type);
-          alert(errorMessage + child.type);
+          this.log('parseBody.IfStatement');
+          /* throw new Error(errorMessage + child.type);
+          alert(errorMessage + child.type); */
+          xml = this.createIfStatement(child);
           break;
         case 'ForInStatement':
           this.log('parseBody.ForInStatement', child);
