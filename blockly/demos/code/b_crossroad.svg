@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 115.4 26" style="enable-background:new 0 0 115.4 26;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FDFEFF;}
+	.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.2;stroke-miterlimit:10;}
+	.st2{font-family:'Monaco';}
+	.st3{font-size:14px;}
+</style>
+<g>
+	<g id="레이어_2_1_">
+		<g id="right">
+			<path class="st0" d="M7,17.9l1.1,1.1c0.1,0.1,0.1,0.1,0.4-0.1L18.9,8.5c0.1-0.1,0.2-0.2,0.1-0.4L17.9,7c-0.1-0.1-0.1-0.1-0.4,0.1
+				L7,17.6C6.9,17.7,6.8,18,7,17.9z"/>
+			<g id="right_1_">
+				<path class="st0" d="M18.9,17.6L8.4,7.1C8.2,6.9,8.1,6.9,8.1,7L6.9,8.1C6.8,8.3,6.9,8.4,7,8.5L17.5,19c0.2,0.2,0.3,0.1,0.4,0.1
+					l1.1-1.1C19.2,18,19,17.7,18.9,17.6z"/>
+			</g>
+		</g>
+	</g>
+	<path class="st0" d="M6.5,6l3.7-0.2c0.6,0,0.9,0.7,0.5,1.1l-3.9,3.9c-0.4,0.4-1.1,0.1-1.1-0.5l0.2-3.7C5.9,6.3,6.1,6,6.5,6z"/>
+	<path class="st0" d="M19.4,6l-3.7-0.2c-0.6,0-0.9,0.7-0.5,1.1l3.9,3.9c0.4,0.4,1.1,0.1,1.1-0.5l-0.2-3.7C20,6.3,19.8,6,19.4,6z"/>
+	<path class="st0" d="M6.5,20.1l3.7,0.2c0.6,0,0.9-0.7,0.5-1.1l-3.9-3.9c-0.4-0.4-1.1-0.1-1.1,0.5l0.2,3.7
+		C5.9,19.8,6.1,20.1,6.5,20.1z"/>
+	<path class="st0" d="M19.4,20.1l-3.7,0.2c-0.6,0-0.9-0.7-0.5-1.1l3.9-3.9c0.4-0.4,1.1-0.1,1.1,0.5l-0.2,3.7
+		C20,19.8,19.8,20.1,19.4,20.1z"/>
+</g>
+<text transform="matrix(1 0 0 1 36.1001 18.2061)" class="st1 st2 st3">crossroad</text>
+</svg>

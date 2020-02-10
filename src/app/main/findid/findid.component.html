@@ -1,0 +1,44 @@
+<!-- <div class="relative w-1/2 h-full text-gray-800"> -->
+  <div class="login-wrapper ab-left-center">
+    <form class="login-container w-full bg-white py-14 px-14 rounded-lg shadow-xl">
+      <div class="login-header flex justify-between">
+        <div>
+          <h3 class="leading-none text-black">아이디 찾기</h3>
+        </div>
+      </div>
+      <div class="login-contents mb-12">
+        <div class="inputG">
+          <span class="input-wrapper w-1/2">
+            <label>성</label>
+            <input class="focus:outline-none" type="text" placeholder="" required>
+            <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+          </span>
+          <span class="input-wrapper w-1/2">
+            <label>이름</label>
+            <input class="focus:outline-none" type="text" placeholder="" required>
+            <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+          </span>
+        </div>
+        <div class="inputG mt-13">
+          <span class="input-wrapper w-full">
+            <label>
+              휴대전화번호 (학생회원은 부모님 번호)
+            </label>
+            <input
+              class="focus:outline-none"
+              type="text" placeholder="" required>
+              <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="login-bottons text-sm btn-w-basic text-center">
+        <div class="inline-block cursor-pointer text-center bg-blue-main hover:bg-blue-main text-white text-lg rounded-full" routerLink="/mypage" (click)="test('로그인하기')">
+          <span class="px-6">확인</span>
+        </div>
+      </div>
+      <div class="text-center"><b class="error-txt text-blue text-xs font-normal pt-5">00님의 아이디는 JUNE1983 입니다.</b></div>
+    </form>
+  </div>
+<!-- </div> -->

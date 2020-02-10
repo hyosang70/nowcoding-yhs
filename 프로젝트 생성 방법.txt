@@ -1,0 +1,13 @@
+nodejs	12.14.1
+npm	6.13.4
+
+$ npm install -g @angular/cli@6.2.5
+$ ng new <project-name>
+$ ng new my-app
+$ cd <project-name>
+$ ng serve
+$ ng build --prod
+ :src/environments/environment.prod.ts
+
+참고
+https://poiemaweb.com/angular-cli

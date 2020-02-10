@@ -1,0 +1,17 @@
+.carousel-container .carousel-item {
+  position: relative;
+  color: white;
+  background-color: #3498db;
+  min-height: 250px;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  font-size: 10em;
+  line-height: 250px;
+}

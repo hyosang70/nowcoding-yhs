@@ -1,0 +1,122 @@
+<div class="board-container flex flex-wrap background-center">
+  <div class="w-full block board-box">
+    <div class="flex container-header">
+      <div class="py-30 dev">
+        <div class="cursor-pointer" (click)="getWorkspaceToXml()">
+          getXML
+        </div>
+      </div>
+      <div class="select mr-2">
+        <select class="boardSelect">
+          <option value="Javascript">Javascript</option>
+        </select>
+      </div>
+      <div class="blockScript flex">
+        <div class="boardButton" 
+          (click)="toggleEditor(true)" 
+          [ngClass]="{'active': isBlockMode}"
+        >
+          <span></span>Block
+        </div>
+        <div class="boardButton" 
+          (click)="toggleEditor(false)" 
+          [ngClass]="{'active': !isBlockMode}"
+        >
+          <span></span>Text
+        </div>
+      </div>
+    </div>
+    <div class="flex container-box">
+      <div class="visual-container flex flex-col">
+        <div class="visual" id="visualBox" #visual>
+          <svg id="mazeSVG" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+            viewBox="0 0 800 800"></svg>
+        </div>
+        <div class="slidecontainer my-4 px-20">
+          <input class="w-full" id="speed" type="range" min="{{sliderValue.min}}" max="{{sliderValue.max}}"
+            [(ngModel)]="sliderValue.value" (ngModelChange)="changeSlider()" />
+        </div>
+        <div class="flex justify-around probleButton">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2  py-4" (click)="resetButton($event)"
+            [attr.disabled]="isStartGame ? null : ''">
+            RESET
+          </button>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-2" (click)="runButton($event)"
+            [attr.disabled]="isStartGame ? '' : null">
+            RUN PROGRAM
+          </button>
+        </div>
+
+        <div class="teacherContainer w-full mt-auto">
+          <div class="timer flex justify-center mb-5">
+            <span class="timer-icon mr-4"></span>
+            <span class="timer-state text-xl mr-4">LIVE 수업중</span>
+            <span class="timer-number text-xl mr-4">{{countUpTime.display}}</span>
+          </div>
+          <div class="button-container flex justify-center" *ngIf="!isStartClass && !isEndClass"
+            (click)="startClass($event)">
+            <button class="start">수업 시작</button>
+          </div>
+          <div class="button-container flex justify-center" *ngIf="isStartClass" (click)="endClass($event)">
+            <button class="end">수업 종료</button>
+          </div>
+        </div>
+        <div class="jsToBlock-container" [ngClass]="{'active': activeMake}">
+          <div class="header flex justify-between items-start">
+            <div class="text-xl">
+              <h2>블록만들기</h2>
+            </div>
+            <div class="text-2xl icon text-center cursor-pointer" (click)="makeToggle()">
+              <i class="fa fa-times"></i>
+            </div>
+          </div>
+          <div class="editor-container">
+            <div ace-editor id="jsToBlockEditor" #aceEditor [(text)]="jsToblockScript" [mode]="'javascript'" [theme]="'monokai'"
+            [options]="options" [readOnly]="false" [autoUpdateContent]="true"
+            (textChanged)="aceEditChange($event)" style="min-height: 100%; width:100%; overflow: auto;"></div>
+          </div>
+          <div class="footer">
+            <div class="error-wrapper text-center">
+              <!-- <p>{{error.message}}</p> -->
+              <p>{{errorMessage}}</p>
+            </div>
+            <div class="flex justify-between">
+              <button class="w-1/2 mr-2 cencel rounded-full py-2" (click)="makeReset()">
+                초기화
+              </button>
+              <button class="w-1/2 ml-2 make rounded-full py-2" (click)="makeBlock()">
+                블록 만들기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="workspace-container">
+        <div class="blockCounter-container">
+          <!-- <span *ngFor="let item of this.gameInfo.blockCount | keyvalue">
+            <h1>{{[item.key, item.value]}}</h1>
+          </span> -->
+          <h1 *ngIf="this.gameInfo.blockCount.loop !== 999">반복 : {{usedBlockCount.loop}} / {{this.gameInfo.blockCount.loop}}</h1>
+          <h1 *ngIf="this.gameInfo.blockCount.command !== 999">커맨드 : {{usedBlockCount.command}} / {{this.gameInfo.blockCount.command}}</h1>
+          <h1 *ngIf="this.gameInfo.blockCount.all !== 999">전체 블럭 : {{usedBlockCount.all}} / {{this.gameInfo.blockCount.all}}</h1>
+        </div>
+        <div class="workspace-box w-full h-full flex relative">
+          <div class="workspace h-full">
+            <div id="blocklyDiv"></div>
+            <div id="startBlocks" style="display: none"></div>
+          </div>
+          <div class="editor bg-gray-500">
+            <div ace-editor id="edit_T" #aceEditor [(text)]="blockScript" [mode]="'javascript'" [theme]="'monokai'"
+              [options]="options" [readOnly]="true" [autoUpdateContent]="true" [durationBeforeCallback]="5000"
+              (textChanged)="aceEditChange($event)" style="min-height: 100%; width:100%; overflow: auto;"></div>
+          </div>
+        </div>
+        <div class="script-box w-full h-full flex relative" [ngClass]="{'disNone': isBlockMode}">
+          <div ace-editor id="scriptEditor" #aceEditor [(text)]="textScript" [mode]="'javascript'" [theme]="'monokai'"
+          [options]="options" [readOnly]="false" [autoUpdateContent]="true"
+          (textChanged)="aceEditChange($event)" style="min-height: 100%; width:100%; overflow: auto;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

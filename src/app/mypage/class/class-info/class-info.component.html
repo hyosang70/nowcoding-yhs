@@ -1,0 +1,654 @@
+<div id="right-contents" class="float-left">
+  <!-- class-top-heade : 로그인 후 수업리스트페이지 수업 선택 > 학생 상단 프로필  -->
+  <div class="class-top-header z-0 relative">
+    <button routerLink="" class="back-class text-gray3 text-xl">&lt; 수업 리스트로 돌아가기</button>
+    <h4>서울아주초등학교 코딩영재반 수업입니다.</h4>
+    <div class="flex items-center">
+      <div class="profile-img-class">
+        <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg" alt="userprofile images" />
+        <i class="text-xl">t</i>
+      </div>
+      <ul class="notice-list hidden">
+        <li class="text-gray3 text-xl">말풍선글씨는 띄어쓰기, 특수문자 포함 30글자로 제한!</li>
+      </ul>
+      <ul class="notice-list teacher">
+        <li class="text-gray3 text-xl">
+          <form>
+            <!-- <input id="noticeInput" type="text" maxlength="30" value="" [(ngModel)]="stringVal" name="notice" (keyup)="inputEvent($event)"/> -->
+            <input id="dynamic_input" type="text" class="width-dynamic proba dva" placeholder="말풍선글씨는 띄어쓰기, 특수문자 포함 30글자로 제한!" maxlength="30" (ngInit)="textWidthFunc()"
+            [(ngModel)]="data" (ngModelChange)="textWidthFunc($event)" name="data"/>
+          </form>
+        </li>
+        <!-- https://codepen.io/Momciloo/pen/bpyMbB -->
+      </ul>
+    </div>
+
+    <div class="school-logo flex items-center"><img src="/src/assets/img/web/school-logo-img.png" alt="images" />
+    </div>
+  </div>
+  <!-- //class-top-heade -->
+
+  <div class="rc-wrap">
+    <!-- class-student : 수업 선택 후 학생 상세페이지  -->
+    <section class="class-student class-wrap hidden">
+      <h4>수업 커리큘럼</h4>
+      <h4>참여인원 13명</h4>
+      <ul class="clearfix join-list">
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동 홍길동 홍길동</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동 홍길동 홍길동</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동 홍길동 홍길동</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동 홍길동 홍길동</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동</span>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <div class="profile-img-class">
+              <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                alt="userprofile images" />
+              <i class="text-xl">t</i>
+            </div>
+            <span class="text-2xl pl-5">홍길동</span>
+          </div>
+        </li>
+      </ul>
+
+      <h4>수업정보</h4>
+      <p class="text-gray3 text-xl leading-none">인증키 만료일 : 2020. 12. 31 </p>
+    </section>
+    <!-- //class-student -->
+
+    <!-- class-teacher : 수업 선택 후 선생님 상세페이지  -->
+    <section class="class-teacher class-wrap relative">
+      <h4>수업 커리큘럼</h4>
+      <b class="un-slick" (click)="test()">button</b>
+      <div class="class-slider clearfix">
+        <div>
+          <div class="inner" routerLink="/lecture/np/001/HC">
+            <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="">1</span>
+              </div>
+              <div class="bottom-box clearfix">
+                <p class="text-xl">해당 문제의 제목이 들어갑니
+                  다. 두줄 들어갑니다.  </p>
+                <span class="text-sm text-gray2">C101 (문제코드)</span>
+                <i class="done">수업 완료</i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inner plan" routerLink="/lecture/mz/001/HC">
+            <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="">2</span>
+              </div>
+              <div class="bottom-box clearfix">
+                <p class="text-xl">해당 문제의 제목이 들어갑니
+                  다. 두줄 들어갑니다.  </p>
+                <span class="text-sm text-gray2">C101 (문제코드)</span>
+                <i class="done">수업 예정</i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inner">
+            <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="ing">3</span>
+              </div>
+              <div class="bottom-box clearfix">
+                <p class="text-xl">해당 문제의 제목이 들어갑니
+                  다. 두줄 들어갑니다.  </p>
+                <span class="text-sm text-gray2">C101 (문제코드)</span>
+                <i>Live 수업중</i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inner">
+            <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="ing">4</span>
+              </div>
+              <div class="bottom-box clearfix">
+                <p class="text-xl">해당 문제의 제목이 들어갑니
+                  다. 두줄 들어갑니다.  </p>
+                <span class="text-sm text-gray2">C101 (문제코드)</span>
+                <i class="nextclass">다음 수업</i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inner">
+            <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="">5</span>
+              </div>
+              <div class="bottom-box clearfix">
+                <p class="text-xl">해당 문제의 제목이 들어갑니
+                  다. 두줄 들어갑니다.  </p>
+                <span class="text-sm text-gray2">C101 (문제코드)</span>
+                <i class="homework">숙제가 있어요!</i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inner">
+            <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="">6</span>
+              </div>
+              <div class="bottom-box clearfix">
+                <p class="text-xl">해당 문제의 제목이 들어갑니
+                  다. 두줄 들어갑니다.  </p>
+                <span class="text-sm text-gray2">C101 (문제코드)</span>
+                <i class="homework">숙제가 있어요!</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h4 class="pt-12">학생정보 12명 </h4>
+      <div class="clearfix tb-teacher-wrap">
+        <div class="float-left tb-teacher1">
+          <table>
+            <colgroup>
+              <col width="25%">
+              <col width="75%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>순번</th>
+                <th>이름</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <div class="flex items-center td-profile">
+                    <div class="profile-img-class">
+                      <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                        alt="userprofile images" />
+                    </div>
+                    <span class="text-1xl pl-4">minanin01023456</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <div class="flex items-center td-profile">
+                    <div class="profile-img-class">
+                      <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg"
+                        alt="userprofile images" />
+                    </div>
+                    <span class="text-1xl pl-4">minanin01023456</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="float-left tb-teacher2">
+          <table>
+            <thead>
+              <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <!-- 출석만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg03.png"/>
+                  <!-- <circle-progress
+                    [percent]="40"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-03.png'"
+                    [imageHeight]="30"
+                    [imageWidth]="30"
+                    [showImage]="true"
+                  ></circle-progress> -->
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 출석만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg03.png"/>
+                  <!-- <circle-progress
+                    [percent]="40"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-03.png'"
+                    [imageHeight]="30"
+                    [imageWidth]="30"
+                    [showImage]="true"
+                  ></circle-progress> -->
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 출석만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg01.png"/>
+                  <!-- <circle-progress
+                    [percent]="40"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-03.png'"
+                    [imageHeight]="30"
+                    [imageWidth]="30"
+                    [showImage]="true"
+                  ></circle-progress> -->
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 출석만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg03.png"/>
+                  <!-- <circle-progress
+                    [percent]="40"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-03.png'"
+                    [imageHeight]="30"
+                    [imageWidth]="30"
+                    [showImage]="true"
+                  ></circle-progress> -->
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 기본 -->
+                  <img src="/src/assets/img/web/progress-icon-bg00.png"/>
+                  <!-- <circle-progress
+                    [percent]="0"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-00.png'"
+                    [imageHeight]="30"
+                    [imageWidth]="30"
+                    [showImage]="true"
+                  ></circle-progress> -->
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 출석,풀이 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg02.png"/>
+                  <!-- <circle-progress
+                    [percent]="0"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-02.png'"
+                    [imageHeight]="30"
+                    [imageWidth]="30"
+                    [showImage]="true"
+                  ></circle-progress> -->
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                
+              </tr>
+              <tr>
+                
+                <td>
+                  <!-- 출석,풀이 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg02.png"/>
+                  <circle-progress
+                    [percent]="90"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-02.png'"
+                    [imageHeight]="31"
+                    [imageWidth]="31"
+                    [showImage]="true"
+                  ></circle-progress>
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 풀이만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg03.png"/>
+                  <circle-progress
+                    [percent]="90"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-03.png'"
+                    [imageHeight]="31"
+                    [imageWidth]="31"
+                    [showImage]="true"
+                  ></circle-progress>
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 0%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 풀이만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg02.png"/>
+                  <circle-progress
+                    [percent]="48"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-02.png'"
+                    [imageHeight]="31"
+                    [imageWidth]="31"
+                    [showImage]="true"
+                  ></circle-progress>
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 70%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 풀이만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg01.png"/>
+                  <circle-progress
+                    [percent]="48"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-01.png'"
+                    [imageHeight]="31"
+                    [imageWidth]="31"
+                    [showImage]="true"
+                  ></circle-progress>
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 70%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 풀이만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg01.png"/>
+                  <circle-progress
+                    [percent]="48"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-01.png'"
+                    [imageHeight]="31"
+                    [imageWidth]="31"
+                    [showImage]="true"
+                  ></circle-progress>
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 70%</span>
+                  </div>
+                </td>
+                <td>
+                  <!-- 풀이만 한 상태 -->
+                  <img src="/src/assets/img/web/progress-icon-bg01.png"/>
+                  <circle-progress
+                    [percent]="48"
+                    [radius]="20"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="9"
+                    [innerStrokeWidth]="9"
+                    [outerStrokeColor]="'#b370ff'"
+                    [innerStrokeColor]="'#e4e4e4'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="300"
+                    [imageSrc]="'/src/assets/img/web/progress-icon-01.png'"
+                    [imageHeight]="31"
+                    [imageWidth]="31"
+                    [showImage]="true"
+                  ></circle-progress>
+                  <div class="hover td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 70%</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="float-left tb-teacher3">
+          <table>
+            <colgroup>
+              <col width="100%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>통계</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 83.2%</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="td-total">
+                    <span>출석 100%</span>
+                    <span>풀이 90.2%</span>
+                    <span>숙제 83.2%</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h4>수업정보</h4>
+      <p class="text-gray3 text-xl leading-none">인증키 만료일 : 2020. 12. 31 </p>
+    </section>
+    <!-- //class-teacher -->
+  </div>
+</div>

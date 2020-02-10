@@ -1,0 +1,75 @@
+$img_path : "/src/assets/img";
+
+#main{
+  height: 100%;
+  margin: 0;
+  h2{
+    font-family: 'Changa', sans-serif;
+    font-weight: 800;
+    color:#fff;
+    font-size: 4.875rem;
+    letter-spacing: 0;
+    text-transform: lowercase;
+    padding-left:11rem;
+  }
+  h3{
+    font-size:2.5rem;
+  }
+  .main-background{
+    // background-image: url(#{$img_path}/web/mountain.png);
+    background-image: url(#{$img_path}/web/mountain_night.png);
+  }
+  .school_container{
+    width: 6.25rem;
+    
+    position: absolute;
+    right:3.625rem;
+    top:2.5rem;
+  }
+  .login-wrapper{
+    width: 100%;
+    max-width: 498px;
+    min-width: 320px;
+    left:5rem;
+    
+    .login-header{
+      margin-bottom:4.025rem;
+    }
+    .login-contents{
+      .showPwdIcon{
+        right: 0.3rem;
+        position: absolute;
+        bottom: 0;
+        color: gray;
+        i{
+          width: 20px;
+        }
+      }
+    }
+    
+  }
+  .btn-w-basic div{
+    width:160px;
+    height: 43px;
+  line-height: 45px;
+  }
+  @media (max-width: 1280px) {
+    .login-wrapper{
+      left:0;
+      max-width:468px
+    }
+    h2{
+      padding-left:0;
+    }
+  }
+}
+
+.temp_font{
+  font-family: fantasy;
+  font-weight: 0;
+  letter-spacing: 17px;
+}
+.py-14{
+  padding-top:3.125rem;
+  padding-bottom:3.75rem;
+}

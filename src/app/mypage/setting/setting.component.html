@@ -1,0 +1,119 @@
+
+<div id="right-contents" class="float-left">
+  <!-- user-profile -->
+  <div class="user-profile flex justify-start relative z-0">
+    <div class="profile-img">
+      <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg" alt="userprofile images" />
+      <input type="file" class="profile-up" />
+      <button class="profile-modify">프로필수정버튼</button>
+    </div>
+    <div class="profile-info">
+      <span class="text-3xl">김미미</span>
+      <span class="text-xl">1999. 2. 1 (여)</span>
+    </div>
+  </div>
+  <!-- // user-profile -->
+
+  <div class="rc-wrap user-setting">
+    <h4>로그인 정보</h4>
+    <div class="user-info-box">
+      <p><span>아이디</span><span class="text-xl">aefef</span></p>
+      <p><span>비밀번호</span><span class="text-xl">******</span><button routerLink="./password">변경하기</button></p>
+      <p><span>이메일</span><span class="text-xl">aefef@gmail.com</span><button routerLink="./mail">변경하기</button></p>
+    </div>
+    <h4>교육기관 인증 (선생님만 보임_인증선생님) </h4>
+    <div>
+      <table>
+        <colgroup>
+          <col width="36%">
+          <col width="29%">
+          <col width="17%">
+          <col width="18%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>교육기관명</th>
+            <th>재직증명서</th>
+            <th>인증여부</th>
+            <th>인증만료일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>서울아주초등학교</td>
+            <td>재직증명서.pdf</td>
+            <td>인증완료</td>
+            <td>2020.12.31</td>
+          </tr>
+          <tr>
+            <td>서울아주초등학교</td>
+            <td>재직증명서.pdf</td>
+            <td>진행중</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>서울아주초등학교</td>
+            <td><button routerLink="./password">업로드하기</button></td>
+            <td>미인증</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>교육기관 인증 (학생만 보임_모두적용)<button class="tb-btn" routerLink="./password">교육기관(학급) 추가하기</button></h4>
+  
+    <div>
+      <table>
+        <colgroup>
+          <col width="36%">
+          <col width="10%">
+          <col width="19%">
+          <col width="17%">
+          <col width="18%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>교육기관명</th>
+            <th>학년</th>
+            <th>반</th>
+            <th>선생님</th>
+            <th>인증만료일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>서울아주초등학교</td>
+            <td>6</td>
+            <td>코딩영재반</td>
+            <td>홍길동</td>
+            <td>2020.12.31</td>
+          </tr>
+          <tr>
+            <td>서울아주초등학교</td>
+            <td>6</td>
+            <td>코딩영재반</td>
+            <td>홍길동</td>
+            <td>2020.12.31</td>
+          </tr>
+          <tr>
+            <td>서울아주초등학교</td>
+            <td>6</td>
+            <td>A10</td>
+            <td>Kendric Lama</td>
+            <td>2020.12.31</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>학부모 인증 (만14세 미만 학생중 미인증 학생만 보임) <button class="tb-btn" routerLink="./confirm">학부모 인증하기</button></h4>
+    <ul class="noti-list">
+      <li>나우코딩을 100% 활용하려면 학부모 인증이 필요합니다. 학부모 인증 시 다음의 기능이 활성화 됩니다.</li>
+      <li>- 개인 학습 데이터 저장 가능</li>
+      <li>- 맞춤형 숙제 제공</li>
+      <li>- 이름 및 프로필 사용 가능</li>
+      <li>- 문의사항은 000-000-0000 또는 <a href="mailto:support@nowcoding.com" target="_blank">support@nowcoding.com</a> 로 연락주십시오. </li>
+    </ul>
+  </div>
+
+</div>
+<router-outlet></router-outlet>

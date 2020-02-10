@@ -1,0 +1,108 @@
+.injectionDiv{
+  .blocklyToolboxDiv{
+    background-color: #fff;
+    opacity: 0.8;
+    border-right: none;
+    overflow: visible;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    #makeBlock{
+      background: #2191db;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+    }
+    #toolBoxArrow{
+      cursor: pointer;
+      position: absolute;
+      right: -19px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0px;
+      height: 0px;
+      transition: all 300ms ease-in-out;
+      
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      border-left: 14px solid #ffffff;
+      border-right: none;
+      &.active{
+        display: none;
+        border-top: 16px solid transparent;
+        border-bottom: 16px solid transparent;
+        border-right: 14px solid #ffffff;
+        border-left: none;
+      }
+    }
+    .blocklyTreeRoot{
+      padding: 0;
+      .blocklyTreeRow{
+        margin: 0;
+        padding: 0;
+        width: 8rem;
+        height: auto;
+        width: 8rem;
+        line-height: 22px;
+        border-bottom: 1px solid #afafaf;
+        .blocklyTreeIcon{
+          display: none !important;
+        }
+        .blocklyTreeLabel{
+          font-family: 'NanumBarunGothic', sans-serif;
+          display: block; 
+          padding: 16px 0 10px 3px;
+          .blocklyTitles{
+            display: flex;
+            flex-direction: column;
+            margin-left: 1rem;
+            font-weight: bold;
+            .title{
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .blocklyScrollbarHandle{
+    fill: #fff !important;
+    opacity: 0.6 !important;
+  }
+  .blocklySvg{
+    .blocklyWorkspace{
+      .blocklyMainBackground{
+        opacity: 0.5 !important;
+        fill: rgba(255, 255, 255, 0.65) !important;
+      }
+      .blocklyTrash{
+        opacity: 0.9 !important;
+      }
+      .blocklyZoom{
+        opacity: 0.9 !important;
+        &>image{
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+}
+.goog-menuitem-checkbox{
+  display: none;
+}
+
+.blocklyWidgetDiv{
+  .goog-menuitem-content img{
+    max-width: unset;
+    display: inline;
+  }
+  .goog-menuitem-checkbox{
+    display: block;
+  }
+}

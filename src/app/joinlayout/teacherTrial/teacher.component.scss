@@ -1,0 +1,104 @@
+@import "./src/variable.scss";
+
+
+.register{
+    max-width:700px;
+    max-height:900px;
+    overflow:auto;
+  .step-wrap{
+    padding-top:3rem;
+  }
+  .register-header{
+    padding-bottom:2rem;
+    .register-navi{
+      i{
+        font-size:1rem;
+        color: $gray-color;
+        &.active{
+          color: $main-color;
+        }
+      }
+    }
+  }
+  
+}
+.h2_title{
+  font-family: 'Changa', sans-serif;
+  font-weight: 800;
+  color:#fff;
+  font-size: 4.875rem;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+.step3-tit{
+  margin-bottom:3rem;
+}
+
+.mb-19{
+  margin-bottom:4rem;
+}
+.pl-33{
+  padding-left:20%;
+}
+.agree-wrap{
+  padding-top:.875rem;
+  padding-bottom:2.5rem;
+}
+  .agree-wrap a{
+  color: $navy-color;
+  border-bottom:solid 1px #0126c4;
+}
+.btn-w-basic div{
+  width:160px;
+  height: 43px;
+  line-height: 45px;
+}
+.name-srch-btn{
+  position: absolute;
+  bottom:0;right:0;
+}
+// .certify-finish{
+//   color:rgba(0,0,0,.8);
+//   font-size:0.875rem;
+//   margin-top:0.875rem;
+//   padding-left:1.875rem;
+//   background:url(./src/app/assets/img/web/certify-arrow.png) no-repeat 0 0 / 18px 18px;
+// }
+
+.file_input_textbox {
+    float:left;
+    height:29px;
+}
+.file_input_div {
+    position:absolute;
+    right:0;
+    top:40px;
+    height:29px;
+    overflow:hidden;
+    span{cursor:pointer;}
+    input{
+        line-height:29px;
+    }
+}
+
+.file_input_hidden {
+    font-size:29px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    opacity:0;
+    filter: alpha(opacity=0);
+    -ms-filter: alpha(opacity=0);
+    cursor:pointer;
+}   
+
+@media screen and (max-width:1280px){
+    .pl-33{
+      padding-left:17%;
+    }
+  }
+  @media screen and (max-width:1080px){
+    .pl-33{
+      padding-left:10%;
+    }
+  }

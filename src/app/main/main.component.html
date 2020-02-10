@@ -1,0 +1,66 @@
+<section id="main">
+  <div class="main-background h-full bg-center bg-no-repeat bg-cover"></div>
+  <div id="contents" class="absolute w-full inset-0" style="min-width: 1024px;">
+    <div class="flex h-full">
+      <div class="relative w-1/2 h-full">
+        <div class="text-center ab-center-center">
+          <h2 class="h2_title uppercase text-4xl font-bold temp_font">
+            nowcoding
+          </h2>
+        </div>
+      </div>
+      <div class="relative w-1/2 h-full text-gray-800 ">
+        <router-outlet></router-outlet>
+      </div>
+      
+
+      <!-- 비밀번호 변경하기 -->
+      <!-- <div class="relative w-1/2 h-full text-gray-800 hidden">
+        <div class="login-wrapper ab-left-center">
+          <form class="login-container w-full bg-white py-14 px-14 rounded-lg shadow-xl">
+            <div class="login-header flex justify-between">
+              <div>
+                <h3 class="leading-none text-black">비밀번호 변경하기 </h3>
+              </div>
+              
+            </div>
+            <div class="login-contents mb-12">
+              <div class="inputG">
+                <span class="input-wrapper w-full">
+                  <label>
+                    비밀번호
+                  </label>
+                  <input
+                    class="focus:outline-none"
+                    type="text" placeholder="5자 이상" required>
+                    <b class="error-txt absolute text-red text-xs font-normal">비밀번호를 입력해 주세요</b>
+                </span>
+              </div>
+              <div class="inputG">
+                <span class="input-wrapper w-full">
+                  <label>
+                    비밀번호 확인
+                  </label>
+                  <input
+                    class="focus:outline-none"
+                    type="text" placeholder="5자 이상" required>
+                    <b class="error-txt absolute text-red text-xs font-normal">비밀번호를 입력해 주세요</b>
+                </span>
+              </div>
+            </div>
+            
+            <div class="login-bottons text-sm btn-w-basic text-center">
+              <div class="inline-block cursor-pointer text-center bg-blue-main hover:bg-blue-main text-white text-lg rounded-full" routerLink="/mypage" (click)="test('로그인하기')">
+                <span class="px-6">확인</span>
+              </div>
+            </div> -->
+            <!-- <div class="text-center"><b class="error-txt text-red text-xs font-normal pt-5">비밀번호 변경 메일이 전송되었습니다.</b></div> -->
+          <!-- </form> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      <!-- //비밀번호 변경하기   -->
+    </div>
+  </div>
+</section>
+
+<!-- <a routerLink="/dashboard">Dashboard</a> -->

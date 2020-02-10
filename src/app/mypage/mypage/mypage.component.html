@@ -1,0 +1,25 @@
+<div class="sub-wrapper">
+  <!-- sub-header -->
+  <div id="sub-header" class="flex justify-between">
+    <div class="main-logo" routerLink=""><img src="/src/assets/img/web/now-logo.png" /></div>
+    <button class="logout-btn" routerLink=""><img src="/src/assets/img/web/logout-icon.png" /></button>
+  </div>
+  <!-- //sub-header -->
+
+  <div class="clearfix sub-bg">
+    <!-- left-navi -->
+    <div id="left-navi" class="float-left relative">
+      <span class="navi-bar"></span>
+      <ul>
+        <li class="on first"><button routerLink="/mypage"> <img src="/src/assets/img/web/navi01.png" /></button></li>
+        <li class="second"><button routerLink="./setting"> <img src="/src/assets/img/web/navi02.png" /></button></li>
+      </ul>
+    </div>
+    <!-- //left-navi -->
+
+    <!-- right-contents -->
+    <router-outlet></router-outlet>
+    <!-- //right-contents -->
+
+    <!-- <button routerLink="./class"> 클래스 누름 </button> -->
+  </div>

@@ -1,0 +1,206 @@
+<div class="register">
+  <div>
+    <div class="p-4 absolute top-0 left-0 cursor-pointer trans150 text-gray-500 hover:text-gray-800" routerLink="/join">
+      <i class="fas fa-chevron-left text-lg"></i> 뒤로가기
+    </div>
+  </div>
+  <div class="step-wrap pl-33">
+    <!-- header step -->
+    <div class="register-header">
+      <div class="text-xs register-navi">
+        <i class="fas fa-circle pr-4 active"></i>
+        <i class="fas fa-circle pr-4"></i>
+        <i class="fas fa-circle pr-4"></i>
+      </div>
+    </div>
+
+    <div class="slider">
+      <!-- step 01 -->
+      <div class="register-content">
+        <div class="text-3xl mb-19">
+          <h2 class="leading-tight">나우코딩에 오신것을 환영합니다. </h2>
+        </div>
+        <p class="text-base leading-normal mb-8">나우코딩과 정식 계약을 맺지 않은 교육기관의 선생님에게는<br>30일동안의 트라이얼 멤버쉽이 제공됩니다.</p>
+        <!-- <p class="text-base pt-8">재직증명서를 업로드한 회원은 나우코딩의 샘플 커리큘럼과 교재에 대한<br>접근권한을 제공합니다.</p> -->
+        <!-- <p class="text-base pt-8 mb-8">재직증명서를 업로드 하지 않은 회원은 최소한의<br>커리큘럼만 체험하실 수 있습니다.</p> -->
+        
+        <form class="w-full max-w-sm">
+         <div class="inputG">
+            <span class="input-wrapper w-1/2">
+              <label>성</label>
+              <input class="focus:outline-none" type="text" placeholder="" required>
+              <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+            </span>
+            <span class="input-wrapper w-1/2">
+              <label>이름</label>
+              <input class="focus:outline-none" type="text" placeholder="" required>
+              <b class="error-txt absolute text-red text-xs font-normal">성과 이름을 입력해 주세요.</b>
+            </span>
+          </div>
+          <div class="inputG">
+            <span class="input-wrapper w-8/12">
+              <label>생년월일</label>
+              <input class="focus:outline-none" type="text" placeholder="예) 19990123" required>
+              <b class="error-txt absolute text-red text-xs font-normal">생년월일을 입력해주세요.</b>
+            </span>
+            <span class="input-wrapper w-4/12">
+              <label>성별</label>
+              <select class="focus:outline-none focus:shadow-outline" required>
+                <option [value]="male">남</option>
+                <option [value]="female">여</option>
+              </select>
+              <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+              
+            </span>
+          </div>
+          <div class="inputG">
+            <span class="input-wrapper w-full">
+              <label>
+                아이디(id)
+              </label>
+              <input
+                class="focus:outline-none"
+                type="text" placeholder="5자 이상" required>
+                <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+            </span>
+  
+          </div>
+          <div class="inputG">
+            <span class="input-wrapper w-full">
+              <label>
+                비밀번호 
+              </label>
+              <input
+                class="focus:outline-none"
+                type="text" placeholder="6자 이상의 영문 + 숫자 조합" required>
+                <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+            </span>
+  
+          </div>
+          <div class="inputG">
+            <span class="input-wrapper w-full">
+              <label>
+                비밀번호 확인 
+              </label>
+              <input
+                class="focus:outline-none"
+                type="text" placeholder="6자 이상의 영문 + 숫자 조합" required>
+                <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+            </span>
+  
+          </div>
+          
+
+          <div class="agree-wrap text-sm">
+            <input type="checkbox" id="agree-chk" class="inpt-chk" />
+            <label for="agree-chk">
+            <a href="" target="_blank">이용약관</a> 및 <a href="" target="_blank">개인정보 보호정책</a> 에 동의합니다.
+          </label>
+          </div>
+        </form>
+        <!-- bottom button -->
+        <div class="login-bottons text-sm btn-w-basic">
+          <div class="inline-block cursor-pointer text-center bg-blue-main hover:bg-blue-main text-white text-lg rounded-full" routerLink="/studentstep2">
+            <span class="px-6">확인</span>
+          </div>
+        </div>
+      </div>
+      <!-- //step 01 -->
+      <!-- step 02 -->
+      <div class="register-content">
+        <div class="text-3xl mb-19">
+          <h2 class="leading-tight">다음 정보를 입력하세요</h2>
+        </div>
+      
+        <form class="w-full max-w-sm">
+         
+          
+          <div class="inputG">
+            <span class="input-wrapper w-full relative">
+              <label>
+                휴대전화번호 
+              </label>
+              <div class="relative">
+                <input
+                class="focus:outline-none"
+                type="text" placeholder="예) 01011112222 (- 없이 입력)" required>
+                <button type="button" class="name-srch-btn">인증번호받기</button>
+                
+              </div>
+              <div class="relative pt-4">
+                <input
+                  class="focus:outline-none"
+                  type="text" placeholder="인증번호입력" required>
+                <button type="button" class="name-srch-btn">인증하기</button>
+                <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+              </div>
+            </span>
+          </div>
+          <div class="inputG">
+            <span class="input-wrapper w-full">
+              <label>
+                소속학교
+              </label>
+              <input
+                class="focus:outline-none"
+                type="text" placeholder="" required>
+                <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+            </span>
+  
+          </div>
+          <div class="inputG">
+            <span class="input-wrapper w-full relative">
+              <label>
+                재직증명서 업로드(복수 업로드 가능)  
+              </label>
+              <input type="text" id="fileName" placeholder="pdf, jpg, png  가능 " class="file_input_textbox" readonly >
+              <div class="file_input_div">
+                <span class="file_input_img_btn" alt="파일찾기">파일찾기</span>
+                <input type="file" name="file_1" class="focus:outline-none file_input_hidden" onchange="javascript: document.getElementById('fileName').value = this.value"/>
+              </div>
+            </span>
+            <div class="up-file relative">
+              <span><b>재직증명서_아주초등학교</b><i>x</i></span>
+              <span><b>재직증명서_아주초등학교</b><i>x</i></span>
+              <span><b>재직증명서_아주초등학교</b><i>x</i></span>
+              <span><b>재직증명서_아주초등학교</b><i>x</i></span>
+              <span><b>재직증명서_아주초등학교</b><i>x</i></span>
+              <span><b>재직증명서_초등학교</b><i>x</i></span>
+            </div>
+          </div>
+
+        </form>
+        <!-- bottom button -->
+        <div class="login-bottons text-sm btn-w-basic mt-8">
+          <div class="inline-block cursor-pointer text-center bg-blue-main hover:bg-blue-main text-white text-lg rounded-full" routerLink="/studentstep2">
+            <span class="px-6">확인</span>
+          </div>
+        </div>
+      </div>
+      <!-- //step 02 -->
+      <!-- step 03 -->
+  
+      <div class="register-content">
+        <div class="text-3xl step3-tit">
+          <h2 class="leading-tight">나우코딩의 트라이얼 멤버가<br>되신 것을축하드립니다.</h2>
+        </div>
+      
+        <p class="text-base leading-normal">재직증명서에 대한 확인은 영업일 기준 48시간 이내<br>이루어집니다. 확인이 완료되면 계정이 활성화됩니다.</p>
+        <!-- <p class="text-base leading-normal">재직증명서를 업로드하지 않은 회원은 나우코딩 이용에 제약이 있습니다. 추후 ‘설정’에서 업로드가 가능합니다.</p> -->
+        <p class="text-base pt-8">트라이얼 멤버쉽은 30일간 유효합니다.</p>
+        <p class="text-base pt-8">문의사항은 이메일 : <a href="mailto:support@nowcoding.com" target="_blank">support@nowcoding.com</a><br>을 이용해 주세요. </p>
+        <!-- bottom button -->
+    <div class="login-bottons text-sm btn-w-basic mt-8">
+      <div class="inline-block cursor-pointer text-center bg-blue-main hover:bg-blue-main text-white text-lg rounded-full" routerLink="/studentstep2">
+        <span class="px-6" routerLink="/teacher">확인</span>
+      </div>
+    </div>
+      </div>
+      <!-- // step 03 -->
+    </div>
+    
+    
+  
+
+  </div>
+</div>

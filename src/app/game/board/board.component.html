@@ -1,0 +1,32 @@
+<div id="board" class="w-full" [style.backgroundImage]="'url('+ background +')'">
+  <div class="board-header flex">
+    <div class="w-full flex">
+      <div class="header-home w-1/3 flex">
+        <div>
+          <img src="/src/assets/img/web/img_home.png"/>
+        </div>
+      </div>
+      <div class="header-navi w-1/3 justify-center flex">
+        <ul>
+          <li>
+            수업 1
+          </li>
+          <li>
+            수업 2
+          </li>
+          <li>
+            수업 3
+          </li>
+        </ul>
+      </div>
+      <div class="header-user w-1/3 justify-end flex" (click)="showStudentList()">
+        <div>서울 무슨 초등학교 2학년 3반</div>
+        <div>홍길동</div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<div class="showStudent" [ngClass]="{'active': showStudent}">
+
+</div>

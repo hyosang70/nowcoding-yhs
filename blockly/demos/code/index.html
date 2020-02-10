@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="google" value="notranslate" />
+  <title>Blockly Demo:</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <script src="/storage.js"></script> -->
+
+  <script src="../../blockly_uncompressed.js"></script>
+  <script src="../../generators/javascript.js"></script>
+  <script src="../../generators/javascript/logic.js"></script>
+  <script src="../../generators/javascript/loops.js"></script>
+  <script src="../../generators/javascript/math.js"></script>
+  <script src="../../generators/javascript/text.js"></script>
+  <script src="../../generators/javascript/lists.js"></script>
+  <script src="../../generators/javascript/colour.js"></script>
+  <script src="../../generators/javascript/variables.js"></script>
+  <script src="../../generators/javascript/procedures.js"></script>
+  <script src="../../generators/javascript/nowcoding_maze.js"></script>
+  <script src="../../msg/messages.js"></script>
+  <script src="../../blocks/logic.js"></script>
+  <script src="../../blocks/loops.js"></script>
+  <script src="../../blocks/math.js"></script>
+  <script src="../../blocks/text.js"></script>
+  <script src="../../blocks/lists.js"></script>
+  <script src="../../blocks/colour.js"></script>
+  <script src="../../blocks/variables.js"></script>
+  <script src="../../blocks/procedures.js"></script>
+  <script src="../../blocks/nowcoding_maze.js"></script>
+  <!--
+      <script src="../../blockly_compressed.js"></script>
+      <script src="../../blocks_compressed.js"></script>
+      <script src="../../javascript_compressed.js"></script>
+      <script src="../../python_compressed.js"></script>
+      <script src="../../php_compressed.js"></script>
+      <script src="../../lua_compressed.js"></script>
+      <script src="../../dart_compressed.js"></script>
+  -->
+
+  <script src="code.js"></script>
+</head>
+
+<body>
+  <table width="100%" height="100%">
+    <tr>
+      <td>
+        <h1>
+          <a href="https://developers.google.com/blockly/">Blockly</a>&rlm; &gt;
+          <a href="../index.html">Demos</a>&rlm; &gt;
+          <span id="title">...</span>
+        </h1>
+      </td>
+      <td class="farSide">
+        <select id="languageMenu"></select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%">
+          <tr id="tabRow" height="1em">
+            <td id="tab_blocks" class="tabon">...</td>
+            <td class="tabmin">&nbsp;</td>
+            <td id="tab_javascript" class="taboff">JavaScript</td>
+            <td class="tabmin">&nbsp;</td>
+            <td id="tab_python" class="taboff">Python</td>
+            <td class="tabmin">&nbsp;</td>
+            <td id="tab_php" class="taboff">PHP</td>
+            <td class="tabmin">&nbsp;</td>
+            <td id="tab_lua" class="taboff">Lua</td>
+            <td class="tabmin">&nbsp;</td>
+            <td id="tab_dart" class="taboff">Dart</td>
+            <td class="tabmin">&nbsp;</td>
+            <td id="tab_xml" class="taboff">XML</td>
+            <td class="tabmax">
+              <button id="trashButton" class="notext" title="...">
+                <img src="../../media/1x1.gif" class="trash icon21" />
+              </button>
+              <button id="linkButton" class="notext" title="...">
+                <img src="../../media/1x1.gif" class="link icon21" />
+              </button>
+              <button id="runButton" class="notext primary" title="...">
+                <img src="../../media/1x1.gif" class="run icon21" />
+              </button>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td height="99%" colspan="2" id="content_area"></td>
+    </tr>
+  </table>
+
+  <div id="content_blocks" class="content"></div>
+  <pre id="content_javascript" class="content"></pre>
+  <pre id="content_python" class="content"></pre>
+  <pre id="content_php" class="content"></pre>
+  <pre id="content_lua" class="content"></pre>
+  <pre id="content_dart" class="content"></pre>
+  <textarea id="content_xml" class="content" wrap="off"></textarea>
+
+  <xml id="toolbox" style="display: none">
+
+
+    <category name="LOGIC" colour="%{BKY_LOGIC_HUE}">
+
+    <block type="controls_if_maze_nowcoding">
+        <mutation elseif="2"></mutation>
+        <statement name="DO0">
+          <block type="turnAngle" id="fx#IjoZk7{42RFef~yoK">
+            <field name="ANGLE">TURNLEFT90</field>
+            <next>
+              <block type="turnAngle" id="jOcc|vt)Rpry3Os]*xhU">
+                <field name="ANGLE">TURNLEFT90</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="DO1">
+        </statement>
+        <statement name="DO2">
+        </statement>
+    </block>
+
+
+    <block type="maze_turn_piece"></block>
+    <block type="maze_turn_piece">
+      <value name="MAZE_TURN_PIECE">
+        <block type="logic_maze_turn_piece">
+          <field name="LOGIC_MAZE_TURN_PIECE">LEFT</field>
+        </block>
+      </value>
+    </block>
+    <block type="maze_path_default"></block>
+    <block type="moveForward"></block>
+    <block type="turn"></block>
+    <block type="turnAngle"></block>
+    <block type="logic_maze_path_check_1_condition"></block>
+    <block type="logic_maze_path_check_2_condition"></block>
+
+      <block type="controls_until_maze_nowcoding" id="8ujE8:BEw8va`Ocq?0KF" x="137" y="238">
+        <statement name="DO">
+          <block type="controls_if_maze_nowcoding" id="]QgiHS)0D9AH9)|0DdPt">
+            <mutation elseif="3"></mutation>
+            <value name="IF0">
+              <block type="logic_maze_path_check_2_condition" id="P|?^W4tT/TqN3IJT798h">
+                <field name="LOGIC_MAZE_PATH_CHECK_2_CONDITION">RIGHT_45</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="turnAngle" id="I1f:s+Mz@^T@U]qHl(m*">
+                <field name="ANGLE">TURNLEFT90</field>
+                <next>
+                  <block type="turnAngle" id="jml-(pRa{%n7o1Xvd;GB">
+                    <field name="ANGLE">TURNLEFT90</field>
+                    <next>
+                      <block type="turnAngle" id="iLQ)7Mv=$XyVGl$bv*On">
+                        <field name="ANGLE">TURNLEFT90</field>
+                        <next>
+                          <block type="turnAngle" id="KzuO=^[idq3Xh]br!PL7">
+                            <field name="ANGLE">TURNLEFT90</field>
+                            <next>
+                              <block type="controls_if_maze_nowcoding" id="RG9[)ld6C8|HD(SWBENf">
+                                <mutation elseif="3"></mutation>
+                                <value name="IF0">
+                                  <block type="logic_maze_path_check_2_condition" id="r$NEp5GjI/g3Gk*2]W;C">
+                                    <field name="LOGIC_MAZE_PATH_CHECK_2_CONDITION">AHEAD_AND_RIGHT</field>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="turnAngle" id="fx#IjoZk7{42RFef~yoK">
+                                    <field name="ANGLE">TURNLEFT90</field>
+                                    <next>
+                                      <block type="turnAngle" id="jOcc|vt)Rpry3Os]*xhU">
+                                        <field name="ANGLE">TURNLEFT90</field>
+                                        <next>
+                                          <block type="turnAngle" id="j/s_PF?vpRK^.1[d]Lf0">
+                                            <field name="ANGLE">TURNLEFT90</field>
+                                            <next>
+                                              <block type="turnAngle" id="Ux~er7A?bxv#!0UF8^un">
+                                                <field name="ANGLE">TURNLEFT90</field>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <value name="IF1">
+                                  <block type="logic_maze_path_check_2_condition" id="V4g@!R|*4`qXmPz~(V5v">
+                                    <field name="LOGIC_MAZE_PATH_CHECK_2_CONDITION">AHEAD_AND_RIGHT</field>
+                                  </block>
+                                </value>
+                                <statement name="DO1">
+                                  <block type="maze_turn_piece" id="e/zrB6+c!kP$$c`)dsL[">
+                                    <value name="MAZE_TURN_PIECE">
+                                      <block type="logic_maze_turn_piece" id="/K)[C8P6(vA0jJzA!dUI">
+                                        <field name="LOGIC_MAZE_TURN_PIECE">RIGHT</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <value name="IF2">
+                                  <block type="logic_maze_path_check_2_condition" id="AX=tzk=1[UZh}^DIv:{h">
+                                    <field name="LOGIC_MAZE_PATH_CHECK_2_CONDITION">AHEAD_AND_RIGHT</field>
+                                  </block>
+                                </value>
+                                <statement name="DO2">
+                                  <block type="turnAngle" id="%4z2,;^bKNsNrIIo:$TI">
+                                    <field name="ANGLE">TURNLEFT90</field>
+                                  </block>
+                                </statement>
+                                <statement name="DO3">
+                                  <block type="turnAngle" id="01U98}B4;2o|ckl=z4c]">
+                                    <field name="ANGLE">TURNLEFT90</field>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="DO1">
+              <block type="maze_turn_piece" id="QQy?!3u!}5khnAx@!.gC">
+                <value name="MAZE_TURN_PIECE">
+                  <block type="logic_maze_turn_piece" id="zRA!tJRpO[qY.-Hk?sX)">
+                    <field name="LOGIC_MAZE_TURN_PIECE">LEFT</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="DO2">
+              <block type="turnAngle" id=",}wNJ-*YiJD%V;;WpLm(">
+                <field name="ANGLE">TURNLEFT90</field>
+              </block>
+            </statement>
+            <statement name="DO3">
+              <block type="turnAngle" id="Cnb){%xJo`R_B4g}[1ZL">
+                <field name="ANGLE">TURNLEFT90</field>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+
+      <block type="controls_if_maze_nowcoding"></block>
+
+      <block type="controls_if_maze_nowcoding">
+        <mutation else='1'></mutation>
+      </block>
+
+
+
+      </category>
+
+
+
+
+
+
+    <category name="repeat" colour="%{BKY_LOOPS_HUE}">
+
+      <block type="controls_until_maze_nowcoding"></block>
+
+        <!-- LoopDefault -->
+          <block type="controls_repeat_ext">
+            <value name="TIMES">
+              <shadow type="math_number">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+          </block>
+
+        <!-- LoopDefault -->
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <block type="math_number">
+              <field name="NUM">50</field>
+            </block>
+          </value>
+        </block>
+
+    <!-- LoopDefault -->
+    <block type="controls_whileUntil"></block>
+
+    <!-- LoopDefault_3 -->
+    <block type="controls_for">
+        <value name="FROM">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+        <value name="NOTHNG">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+
+        <value name="TO">
+            <block type="math_number">
+                <field name="NUM">10</field>
+            </block>
+        </value>
+        <value name="BY">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+    </block>
+
+    <!-- LoopDefault_2
+    <block type="controls_repeat">
+      <value name="TIMES">
+        <shadow type="math_number">
+          <field name="NUM"></field>
+        </shadow>
+      </value>
+  </block> -->
+
+    <!-- LoopDefault_2 -->
+    <block type="controls_forEach"></block>
+
+
+    <!-- TextLabelInputHoleLoop -->
+    <block type="controls_flow_statements"></block>
+
+
+    </category>
+
+
+
+
+
+
+
+
+
+
+    <category name="test" colour="%{BKY_LOOPS_HUE}">
+
+      <block type="math_arithmetic">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="B">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="moveForward"></block>
+      <block type="maze_turn_piece"></block>
+      <block type="controls_if_maze_nowcoding"></block>
+
+    <block type="controls_if_maze_nowcoding">
+      <mutation else='1'></mutation>
+    </block>
+
+
+    </category>
+    <category name="IF" colour="%{BKY_LOOPS_HUE}">
+      <block type="controls_if_maze_nowcoding"></block>
+    </category>
+    <category name="MOVE" colour="%{BKY_LOOPS_HUE}">
+      <block type="moveForward"></block>
+      <block type="logic_maze_path_check_1_condition" id="uO$yUk9Pnry58S,}Nkhk" x="588" y="138">
+        <field name="LOGIC_MAZE_PATH_CHECK_1_CONDITION">PATH_AHEAD</field>
+      </block>
+    </category>
+    <category name="ORIGINAL" colour="%{BKY_LOOPS_HUE}">
+      <block type="controls_if"></block>
+    </category>
+  </xml>
+</body>
+
+</html>

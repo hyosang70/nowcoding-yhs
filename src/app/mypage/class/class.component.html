@@ -1,0 +1,207 @@
+<div id="right-contents" class="float-left">
+  <!-- user-profile : 로그인 후 수업 리스트 페이지 상단 프로필 영역 -->
+  <div class="user-profile flex justify-start relative z-0">
+    <div class="profile-img">
+      <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg" alt="userprofile images" />
+      <!-- <button class="profile-modify">프로필수정버튼</button> -->
+    </div>
+    <div class="profile-info">
+      <span class="text-3xl">김미미 학생, 반가워요! </span>
+      <span class="text-xl">서울아주초등학교</span>
+    </div>
+
+    <div class="prograss-student">
+      
+        <p class="flex justify-between">
+          <span class="text-xl pt-3">출석</span>
+          <span>87.5%</span>
+        </p>
+        <div class="progress">
+          <div class="prograss-student-bar bar1" role="progressbar">
+          </div>
+        </div>
+        <p class="flex justify-between">
+          <span class="text-xl pt-3">숙제</span>
+          <span>50%</span>
+        </p>
+        <div class="progress">
+          <div class="prograss-student-bar bar2" role="progressbar">
+          </div>
+        </div>
+      
+      
+
+    </div>
+
+  </div>
+  <!-- // user-profile -->
+
+
+  <div class="rc-wrap">
+    <!-- mypage-student : 로그인 후 수업 리스트 -->
+    <section class="mypage-student">
+      <div class="tab_box clearfix">
+        <ul>
+          <li class="on text-lg">진행 중인 수업</li>
+          <li class="text-lg">종료된 수업</li>
+        </ul>
+      </div>
+      <div class="tab_content">
+        <div class="tab_cont_in1" style="display:block;">
+          <ul class="clearfix">
+            <li routerLink="/mypage/class/1">
+              <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="text-2xl text-white">서울아주초등학교</span>
+                <b class="text-4xl text-white">5학년 3반</b>
+              </div>
+              <div class="bottom-box clearfix">
+                <div class="relative">
+                  <img src="https://pbs.twimg.com/profile_images/556415560305491969/_jRDkAAo_400x400.jpeg" />
+                  <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg" />
+                  <img
+                    src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F2544565053BED1602BE980" />
+                </div>
+                <span>김석중 선생님 외 14명</span>
+                <i>Live 수업중</i>
+              </div>
+              
+              <div class="class-progress ">
+                <span>수업<b>7-1</b></span>
+                <circle-progress
+                    [percent]="40"
+                    [radius]="56"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="10"
+                    [outerStrokeColor]="'#ff431e'"
+                    [innerStrokeColor]="'#fff'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="1500"
+                    [title]="'수업'"
+                  ></circle-progress>
+              </div>
+            </li>
+            <li routerLink="/mypage/class/2">
+              <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="text-2xl text-white">서울아주초등학교</span>
+                <b class="text-4xl text-white">5학년 3반</b>
+              </div>
+              <div class="bottom-box">
+                <div class="relative">
+                  <img src="https://pbs.twimg.com/profile_images/556415560305491969/_jRDkAAo_400x400.jpeg" />
+                  <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg" />
+                  <img
+                    src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F2544565053BED1602BE980" />
+                </div>
+                <span>김석중 선생님 외 14명</span>
+                <i>Live 수업중</i>
+              </div>
+              <div class="class-progress ">
+                <span>수업<b>3-1</b></span>
+                <circle-progress
+                    [percent]="90"
+                    [radius]="56"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="10"
+                    [outerStrokeColor]="'#ff431e'"
+                    [innerStrokeColor]="'#fff'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="1500"
+                    [title]="'수업'"
+                  ></circle-progress>
+              </div>
+            </li>
+            <li routerLink="/mypage/class/2">
+              <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="text-2xl text-white">서울아주초등학교</span>
+                <b class="text-4xl text-white">5학년 3반</b>
+              </div>
+              <div class="bottom-box">
+                <div class="relative">
+                  <img src="https://pbs.twimg.com/profile_images/556415560305491969/_jRDkAAo_400x400.jpeg" />
+                  <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg" />
+                  <img
+                    src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F2544565053BED1602BE980" />
+                </div>
+                <span>김석중 선생님 외 14명</span>
+                <i>Live 수업중</i>
+              </div>
+              <div class="class-progress ">
+                <span>수업<b>3-1</b></span>
+                <circle-progress
+                    [percent]="90"
+                    [radius]="56"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="10"
+                    [outerStrokeColor]="'#ff431e'"
+                    [innerStrokeColor]="'#fff'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="1500"
+                    [title]="'수업'"
+                  ></circle-progress>
+              </div>
+            </li>
+            <li routerLink="/mypage/class/2">
+              <div class="top-box"
+                style="background:url(/src/assets/img/web/student-class-bg01.jpg) no-repeat 0 bottom / cover">
+                <span class="text-2xl text-white">서울아주초등학교</span>
+                <b class="text-4xl text-white">5학년 3반</b>
+              </div>
+              <div class="bottom-box">
+                <div class="relative">
+                  <img src="https://pbs.twimg.com/profile_images/556415560305491969/_jRDkAAo_400x400.jpeg" />
+                  <img src="https://pbs.twimg.com/profile_images/855420819371048960/trUw5N_3.jpg" />
+                  <img
+                    src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F2544565053BED1602BE980" />
+                </div>
+                <span>김석중 선생님 외 14명</span>
+                <i>Live 수업중</i>
+              </div>
+              <div class="class-progress ">
+                <span>수업<b>3-1</b></span>
+                <circle-progress
+                    [percent]="90"
+                    [radius]="56"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [showSubtitle]="false"
+                    [showInnerStroke]="true"
+                    [outerStrokeWidth]="10"
+                    [innerStrokeWidth]="10"
+                    [outerStrokeColor]="'#ff431e'"
+                    [innerStrokeColor]="'#fff'"
+                    [animation]="true"
+                    [space]="-10"
+                    [animationDuration]="1500"
+                    [title]="'수업'"
+                  ></circle-progress>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab_cont_in2">
+          test222
+        </div>
+      </div>
+    </section>
+    <!-- //mypage-student -->
+  </div>
+
+</div>

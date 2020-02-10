@@ -1,0 +1,32 @@
+<div class="h-full relative join-first">
+  <div class="join-wrapper mt-40 pl-16 w-full" [@fadeInOut]>
+    <div class="mb-32">
+      <h1 class="text-4xl2 leading-none">회원가입</h1>
+    </div>
+
+    <div class="mb-28 cursor-pointer trans150 selectUserType" 
+    routerLink="./student">
+      <div class="inline-flex pb-6 selectTitle">
+        <i class="join-arrow fas fa-angle-right mr-5"></i>
+        <div class="self-center text-2xl leading-none">학생 회원가입</div>
+      </div>
+      <div class="join-text">
+        <p class="text-gray3 leading-none">나우코딩 인증 교육기관의 학생만 가입이 가능합니다.</p>
+      </div>
+    </div>
+    
+    <div class="cursor-pointer trans150 selectUserType"
+    routerLink="./teacher">
+      <div class="inline-flex pb-6 selectTitle">
+        <i class="join-arrow fas fa-angle-right mr-5"></i>
+        <div class="self-center text-2xl leading-none">교사 회원가입</div>
+      </div>
+      <div class="join-text">
+        <p class="text-gray3 leading-tight pb-2">트라이얼 멤버 (교사) 회원가입 입니다.</p>
+        <p class="text-gray3 leading-tight pb-2">가입을 위해서는 교육기관 재직증명서가 필요합니다.</p>
+        <p class="text-gray3 leading-tight">인증 교육기관의 교사는 초대 메일을 통해 회원가입을 진행해 주세요.</p>
+      </div>
+    </div>
+    <div routerLink="./teacherTrial" class="absolute">교사 트리얼</div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="login-wrapper ab-left-center">
+  <form class="login-container w-full bg-white py-14 px-14 rounded-lg shadow-xl">
+    <div class="login-header flex justify-between">
+      <div>
+        <h3 class="leading-none text-black">로그인</h3>
+      </div>
+      <div class="school_container top-0 right-0">
+        <div class="school_logo h-full">
+          <img src="/src/assets/img/web/school_logo2.png">
+        </div>
+      </div>
+    </div>
+    <div class="login-contents mb-12">
+      <div class="flex flow-wrap items-center border-b border-b-2 border-black">
+        <label class="block tracking-wide text-black font-bold">
+          아이디(id)
+        </label>
+        <input
+          class="pb1 appearance-none block lowercase bg-transparent border-none w-full text-gray2 text-sm mr-3 mt-3 leading-tight focus:outline-none"
+          type="text" placeholder="">
+          
+      </div>
+      <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+      <div class="flex relative flow-wrap items-center border-b border-b-2 border-black mt-13">
+        <label class="block tracking-wide text-black font-bold">
+          비밀번호(password)
+        </label>
+        <input
+          class="pb1 appearance-none block lowercase bg-transparent border-none w-full text-gray2 text-sm mr-3 mt-3 leading-tight focus:outline-none"
+          [type]="show_pwd ? 'text' : 'password'" placeholder="">
+          <a class="showPwdIcon cursor-pointer" (click)="toggle_pwd()">
+            <i class="fas fa-eye-slash" *ngIf="!show_pwd"></i>
+            <i class="fas fa-eye" *ngIf="show_pwd"></i>
+          </a>
+      </div>
+      <b class="error-txt absolute text-red text-xs font-normal">에러메시지 들어가는 곳</b>
+    </div>
+    <div class="login-footer text-sm">
+      <div class="mb-7 leading-none">
+        <span class="cursor-pointer text-black text-sm hover:text-black"
+          routerLink="/main/id"
+        >아이디 찾기</span>
+        <span> / </span>
+        <span class="cursor-pointer text-black text-sm hover:text-black"
+        routerLink="/main/password"
+        >비밀번호 찾기</span>
+      </div>
+      <div class="mb-13">
+        <span class="text-black text-sm">아직 회원이 아니신가요? </span>
+        <span class="cursor-pointer text-navy border-b border-b-navy hover:text-navy" (click)="test('회원가입')" routerLink="/join">나우코딩의 회원이 되세요!</span>
+      </div>
+    </div>
+    <div class="login-bottons text-sm btn-w-basic text-center">
+      <div class="inline-block cursor-pointer text-center bg-blue-main hover:bg-blue-main text-white text-lg rounded-full" routerLink="/mypage" (click)="test('로그인하기')">
+        <span class="px-6">로그인</span>
+      </div>
+    </div>
+    <div class="text-center"><b class="error-txt text-blue text-xs font-normal pt-5">재직증명서 인증이 진행 중입니다. 인증 후 이용해 주세요.</b></div>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+$header-back: #2e4686;
+$alpha: 0.6;
+
+#board{
+  background-size: cover;
+  height: 100vh;
+  .board-header{
+    height: 60px;
+    background-color: rgba($header-back, $alpha);
+    .header-home{
+
+    }
+    .header-navi{
+
+    }
+    .header-user{
+
+    }
+
+  }
+}
+
+
+.showStudent{
+  position: absolute;
+  top: 60px;
+  right: -318px;
+  width: 318px;
+  height: calc( 100% - 60px );
+  background: red;
+  z-index: 1001;
+  transition: 340ms right ease-in-out;
+  &.active{
+    right:0;
+  }
+}
