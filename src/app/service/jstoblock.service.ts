@@ -356,8 +356,7 @@ export class JstoblockService {
           break;
         case 'IfStatement':
           this.log('parseBody.IfStatement');
-          /* throw new Error(errorMessage + child.type);
-          alert(errorMessage + child.type); */
+  
           xml = this.createIfStatement(child);
           break;
         case 'ForInStatement':
