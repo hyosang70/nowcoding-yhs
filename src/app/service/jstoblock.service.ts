@@ -52,7 +52,7 @@ export class JstoblockService {
       this.usedFunctions,
       'Ifs:',
       this.usedIfs
-    );
+    )
   } */
 
   public createElement(tagName) {
@@ -324,6 +324,7 @@ export class JstoblockService {
     let errorMessage = 'Error: Unsupported Javascript: ';
 
     if (child) {
+
       // this.log('ParseBody.Child', child);
       switch (child.type) {
         case 'VariableDeclaration':
