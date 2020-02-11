@@ -153,21 +153,15 @@ export class JstoblockService {
 
     let element = this.createBlock('controls_if');
 
-    //element = this.parseAssignmentExpression(child.init, element);
+    return element;
+  }
 
-    /* const toValue = this.createValue('IF0');
-    const toShadow = this.createShadow('logic_boolean'); */
-    /* const toShadowField = this.createField(
-      child.test.right.value,
-      'NUM',
-      null,
-      null
-    ); */
+  public createIfElseStatement(child){
+    this.log('createIfElseStatement', child);
 
-   /*  toShadow.appendChild(toShadowField);
-    toValue.appendChild(toShadow); */
+    let element = this.createBlock('controls_ifelse');
 
-      return element;
+    return element;
   }
 
   // for loop
@@ -247,42 +241,144 @@ export class JstoblockService {
 
   public createExpressionBlock(child) {
     this.log('createExpressionBlock', child);
-    const exprSettings = this.getSupportedExpression(
-      child.expression.callee
-        ? child.expression.callee.name
-        : child.expression.name
-    );
 
-    if (!exprSettings) {
-      this.log('not valid expression');
-      return;
-    }
 
-    const element = this.createBlock(child.expression.callee.name);
-    let value, shadow, block, blockField, shadowField;
+    
+    // erase block
+    if(child.expression.type == "CallExpression"){
+      const exprSettings = this.getSupportedExpression(
+        child.expression.callee
+          ? child.expression.callee.name
+          : child.expression.name
+      );
 
-    for (let i = 0; i < child.expression.arguments.length; i++) {
-      const arg = child.expression.arguments[i];
-
-      const argValue = arg.value ? arg.value : exprSettings.types[i];
-      const types = this.getVarType(argValue);
-
-      value = this.createValue(exprSettings.args[i]);
-      shadow = this.createShadow(types.type);
-      shadowField = this.createField(argValue, types.name, null, null);
-      shadow.appendChild(shadowField);
-      value.appendChild(shadow);
-
-      if (arg.type === 'Identifier') {
-        block = this.createBlock('variables_get');
-        blockField = this.createField(arg.name, 'VAR', null, null);
-        block.appendChild(blockField);
-        value.appendChild(block);
+      if (!exprSettings) {
+        this.log('not valid expression');
+        return;
       }
-      element.appendChild(value);
+  
+      const element = this.createBlock(child.expression.callee.name);
+      let value, shadow, block, blockField, shadowField;
+  
+      for (let i = 0; i < child.expression.arguments.length; i++) {
+        const arg = child.expression.arguments[i];
+  
+        const argValue = arg.value ? arg.value : exprSettings.types[i];
+        const types = this.getVarType(argValue);
+  
+        value = this.createValue(exprSettings.args[i]);
+        shadow = this.createShadow(types.type);
+        shadowField = this.createField(argValue, types.name, null, null);
+        shadow.appendChild(shadowField);
+        value.appendChild(shadow);
+  
+        if (arg.type === 'Identifier') {
+          block = this.createBlock('variables_get');
+          blockField = this.createField(arg.name, 'VAR', null, null);
+          block.appendChild(blockField);
+          value.appendChild(block);
+        }
+        element.appendChild(value);
+      }
+  
+      return element;
     }
 
-    return element;
+    // ==, !=, <, <=, >, >= 
+    else if(child.expression.type == 'BinaryExpression'){
+      if(child.expression.operator == "=="){
+        const element = this.createBlock('logic_compare');
+        const field = this.createField('EQ', 'OP', null, null);
+
+        element.appendChild(field);
+
+        return element;
+      }
+      else if(child.expression.operator == "!="){
+        const element = this.createBlock('logic_compare');
+        const field = this.createField('NEQ', 'OP', null, null);
+
+        element.appendChild(field);
+
+        return element;
+
+      }
+      else if(child.expression.operator == "<"){
+        const element = this.createBlock('logic_compare');
+        const field = this.createField('LT', 'OP', null, null);
+
+        element.appendChild(field);
+        return element;
+      }
+      else if(child.expression.operator == "<="){
+        const element = this.createBlock('logic_compare');
+        const field = this.createField('LTE', 'OP', null, null);
+
+        element.appendChild(field);
+        return element;
+
+      }
+
+      else if(child.expression.operator == ">"){
+        const element = this.createBlock('logic_compare');
+        const field = this.createField('GT', 'OP', null, null);
+
+        element.appendChild(field);
+        return element;
+
+      }
+      else if(child.expression.operator == ">="){
+        const element = this.createBlock('logic_compare');
+        const field = this.createField('GTE', 'OP', null, null);
+
+        element.appendChild(field);
+        return element;
+      }
+      
+    }
+
+    // and, or
+    else if(child.expression.type == 'LogicalExpression'){
+      if(child.expression.operator == '&&'){
+        const element = this.createBlock('logic_operation');
+
+        const field = this.createField('AND', 'OP', null, null);
+
+        element.appendChild(field);
+
+        return element;
+      }
+      else{
+        let element = this.createBlock('logic_operation');
+
+        const field = this.createField('OR', 'OP', null, null);
+
+        element.appendChild(field)
+
+        return element;
+      }
+        
+    }
+    // not
+    else if(child.expression.type == 'UnaryExpression'){
+      if(child.expression.operator == '!'){
+        const element = this.createBlock('logic_negate');
+
+        return element;
+      }
+    }
+    // true or false
+    else if(child.expression.type == "Literal"){
+      let element = this.createBlock('logic_boolean');
+      
+      const field = this.createField(child.expression.raw.toUpperCase(), 'BOOL', null, null);
+      
+      element.appendChild(field);
+
+      return element;
+      
+    }
+
   }
 
   public getSupportedExpression(name) {
@@ -357,8 +453,10 @@ export class JstoblockService {
           break;
         case 'IfStatement':
           this.log('parseBody.IfStatement');
-  
-          xml = this.createIfStatement(child);
+          if(child.alternate != null)
+            xml = this.createIfElseStatement(child);
+          else
+            xml = this.createIfStatement(child);
           break;
         case 'ForInStatement':
           this.log('parseBody.ForInStatement', child);
