@@ -53,6 +53,6 @@
   "dependencies": {
     "@angular-devkit/build-angular": "^0.803.23",
     "@angular/cli": "^6.2.5",
-    "jsdom": "^12.0.0"
+    "jsdom": "^16.5.0"
   }
 }
