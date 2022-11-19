@@ -51,7 +51,7 @@
     "unused": true
   },
   "dependencies": {
-    "@angular-devkit/build-angular": "^0.803.23",
+    "@angular-devkit/build-angular": "^15.0.0",
     "@angular/cli": "^6.2.5",
     "jsdom": "^12.0.0"
   }
